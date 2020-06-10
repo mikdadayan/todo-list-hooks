@@ -5,17 +5,19 @@ import Divider from "@material-ui/core/Divider";
 import {v1 as uuidv4} from "uuid";
 import Todo from './Todo'
 function TodoList(props){
-    console.log(uuidv4())
-    return(
-        <Paper>
-            <List>
-                {props.todos.map(t => (
-                    <Todo id={t.id} task={t.task} key={uuidv4()} completed={t.completed} deleteTodo={props.deleteTodo} toggleTodo={props.toggleTodo}/>
-                ))}
-            </List>
-        </Paper>
-         
-    )
+    if(props.todos.length){
+        return(
+            <Paper>
+                <List>
+                    {props.todos.map(t => (
+                        <Todo id={t.id} task={t.task} key={uuidv4()} completed={t.completed} deleteTodo={props.deleteTodo} toggleTodo={props.toggleTodo} editTodo={props.editTodo}/>
+                    ))}
+                </List>
+            </Paper>
+            
+        )
+    }
+    return null
 }
 
 export default TodoList;
