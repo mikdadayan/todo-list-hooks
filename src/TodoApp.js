@@ -3,8 +3,9 @@ import TypogGraphy from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import TodoList from "./TodoList";
 import Grid from "@material-ui/core/Grid";
+import TodoList from "./TodoList";
+import TodoForm from "./TodoForm";
 
 function TodoApp(){
     const initialList = [
@@ -13,6 +14,9 @@ function TodoApp(){
         {id: 3, task: "Grow Beard", completed: false},
     ];
     const [todos, setTodos] = useState(initialList);
+    const addTodo = newTodoText => {
+        setTodos([...todos, {id:4, task: newTodoText, completed: false}])
+    }
      return <Paper 
         style={{
             padding: 0,
@@ -27,6 +31,7 @@ function TodoApp(){
                 <TypogGraphy color='inherit'>TODO HOOKS</TypogGraphy>
             </Toolbar>
         </AppBar>
+        <TodoForm addTodo={addTodo}/>
         <TodoList todos={todos}/>
     </Paper>
 }
