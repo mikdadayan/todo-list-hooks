@@ -9,13 +9,9 @@ import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 
 function TodoApp(){
-    const initialList = JSON.parse(window.localStorage.getItem("todos") || "[]");
-    console.log(initialList)
-    const {todos, addTodo, toggleTodo, deleteTodo, editTodo}  = useTodoState(initialList);
+    const initialList = [];
+    const {todos, addTodo, toggleTodo, deleteTodo, editTodo} = useTodoState(initialList);
 
-    useEffect(() => {
-        window.localStorage.setItem("todos", JSON.stringify(todos));
-    }, [todos]);
 
      return <Paper 
         style={{
