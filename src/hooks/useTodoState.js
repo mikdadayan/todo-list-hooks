@@ -18,7 +18,6 @@ export default initialTodos => {
             const updatedTodos = todos.map(t => {
                 return t.id === todoId ? {...t,completed: !t.completed} : t
             })
-        
             setTodos(updatedTodos);
         },
         editTodo: (todoId, task) => {
