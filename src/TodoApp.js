@@ -10,8 +10,6 @@ import TodoForm from "./TodoForm";
 import { TodosProvider } from './contexts/todo.context';
 
 function TodoApp(){
-    // const initialList = [];
-    // const { todos, addTodo, toggleTodo, deleteTodo, editTodo} = useTodoState(initialList);
 
 
      return <Paper 
