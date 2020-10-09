@@ -8,7 +8,6 @@ function useLocalStorageState(key, defaultVal){
             val = JSON.parse(window.localStorage.getItem(key) || String(defaultVal));
         }
         catch(e){
-            // console.log(e)
             val = defaultVal;
         }
 
