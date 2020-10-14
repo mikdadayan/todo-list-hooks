@@ -20,8 +20,7 @@ function EditTodoForm({id, task, todoToggle }) {
                 value={value} 
                 onChange={handleChange} 
                 fullWidth
-                autoFocus
-            />
+                autoFocus/>
         </form>
        
     )
