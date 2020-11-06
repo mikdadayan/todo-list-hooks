@@ -17,7 +17,7 @@ function TodoApp(){
             padding: 0,
             margin: 0 ,
             height: "100vh",
-            backgroundColor: "#fafafa"
+            backgroundColor: "#fafaf0"
         }}
         elevation={0}
         >
